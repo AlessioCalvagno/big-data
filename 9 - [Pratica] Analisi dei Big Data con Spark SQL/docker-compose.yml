@@ -43,7 +43,7 @@ services:
 #               ZEPPELIN                    #
 #############################################
   zeppelin:
-    image: apache/zeppelin:0.10.0
+    image: apache/zeppelin:0.11.2
     ports:
       - "8080:8080"
     volumes:

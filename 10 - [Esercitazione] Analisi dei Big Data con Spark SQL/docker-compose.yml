@@ -27,23 +27,23 @@ services:
     volumes:
       - shared_data:/spark
       - ./data:/data
-  #spark-worker-2:
-  #  image: bde2020/spark-worker:3.0.0-hadoop3.2
-  #  container_name: spark-worker-2
-  #  depends_on:
-  #    - spark-master
-  #  ports:
-  #    - "8083:8081"
-  #  environment:
-  #    - "SPARK_MASTER=spark://spark-master:7077"
-  #  volumes:
-  #    - shared_data:/spark
-  #    - ./data:/data
+  spark-worker-2:
+   image: bde2020/spark-worker:3.0.0-hadoop3.2
+   container_name: spark-worker-2
+   depends_on:
+     - spark-master
+   ports:
+     - "8083:8081"
+   environment:
+     - "SPARK_MASTER=spark://spark-master:7077"
+   volumes:
+     - shared_data:/spark
+     - ./data:/data
 #############################################
 #               ZEPPELIN                    #
 #############################################
   zeppelin:
-    image: apache/zeppelin:0.10.0
+    image: apache/zeppelin:0.11.2
     ports:
       - "8080:8080"
     volumes:
