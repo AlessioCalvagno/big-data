@@ -3,10 +3,10 @@
     {
       "text": "%md\n## Analisi di 28 milioni recensioni di film\n\nIn questo notebook utilizzeremo Spark con il modulo SparkSQL ed un Dataframe per analizzare oltre 28 milioni di recensioni di film. Nello specifico le domande alla quale cerchermo di dare una risposta sono le seguenti:\n\n1. Quante recensioni ci sono esattamente nel dataset ?\n2. Qual è il numero di recensioni medie per utente ?\n3. Quale utente ha scritto più recensioni ? Quante sono le recensioni che ha scritto ? Qual è il suo voto medio ?\n4. Quali sono i 10 film che hanno ricevuto più recensioni ?\n5. Quali sono i 10 film con le recensioni più positive ?\n6. Quali sono i 10 film con le recensioni più negative ?\n7. Quali sono le 10 recensioni più recenti ?\n8. Qual è il film più visto per anno ?\n9. BONUS Aggiungi titolo e genere alla lista dei film più visti per anno e salva il risultato in un film csv",
       "user": "anonymous",
-      "dateUpdated": "2022-09-03 14:23:04.600",
+      "dateUpdated": "2025-01-29 22:44:07.985",
       "progress": 0,
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true,
@@ -16,7 +16,7 @@
         "colWidth": 12.0,
         "editorMode": "ace/mode/markdown",
         "fontSize": 9.0,
-        "editorHide": true,
+        "editorHide": false,
         "results": {},
         "enabled": true
       },
