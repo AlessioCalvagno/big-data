@@ -24,25 +24,25 @@ services:
     environment:
       - SPARK_MASTER=spark://spark-master:7077
       - SPARK_WORKLOAD=worker
-      - SPARK_WORKER_MEMORY=2G
+      # - SPARK_WORKER_MEMORY=5G
     volumes:
       - shared_data:/opt/spark
       - ./data:/data
 
-  spark-worker-2:
-    image: spark_cluster:latest
-    container_name: spark-worker-2
-    depends_on:
-      - spark-master
-    ports:
-      - "8083:8081"
-    environment:
-      - SPARK_MASTER=spark://spark-master:7077
-      - SPARK_WORKLOAD=worker
-      - SPARK_WORKER_MEMORY=2G
-    volumes:
-      - shared_data:/opt/spark
-      - ./data:/data
+  # spark-worker-2:
+  #   image: spark_cluster:latest
+  #   container_name: spark-worker-2
+  #   depends_on:
+  #     - spark-master
+  #   ports:
+  #     - "8083:8081"
+  #   environment:
+  #     - SPARK_MASTER=spark://spark-master:7077
+  #     - SPARK_WORKLOAD=worker
+  #     - SPARK_WORKER_MEMORY=5G
+  #   volumes:
+  #     - shared_data:/opt/spark
+  #     - ./data:/data
 #############################################
 #               ZEPPELIN                    #
 #############################################
